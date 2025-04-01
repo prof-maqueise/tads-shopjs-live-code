@@ -1,22 +1,27 @@
+import { listarProdutos } from './services/api'
 import './style.css'
 import '@phosphor-icons/web/regular'
-async function listarProdutos() {
-    let response = await fetch('https://dummyjson.com/products')
-    let dados = await response.json()
-    return dados.products
-}
 
 async function init() {
     let produtosAPI = await listarProdutos()
-    let ul = document.querySelector('#produtos')
-    let liProdutos = produtosAPI.map((produto) => {
-        return `<li> 
-                  ${produto.title}
-                  <img src="${produto.thumbnail}"/>
-                </li>`
+    let sectionProdutos = document.querySelector('#produtos')
+    let cardProdutos = produtosAPI.map((produto) => {
+        return /*html*/ `<div class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      src="${produto.thumbnail}"/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">${produto.title}</h2>
+    <div class="card-actions justify-end">
+       <sup class="text-sm">R$</sup><span class="text-xl">${produto.price}</span>
+    </div>
+  </div>
+</div>`
+
     })
-    liProdutos.forEach((produto) => {
-        ul.innerHTML += produto
+    cardProdutos.forEach((produto) => {
+        sectionProdutos.innerHTML += produto
     });
 }
 
