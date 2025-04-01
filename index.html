@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Projeto Vite - Vanilla Javascript</title>
+  </head>
+  <body>
+    <div class="navbar shadow-sm bg-primary text-primary-content">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl"
+          ><i class="ph ph-storefront"></i>TADS-SHOP</a
+        >
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <span class="badge badge-sm indicator-item">0</span>
+              <i class="ph ph-shopping-cart"></i>
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+          >
+            <div class="card-body">
+              <span class="text-lg font-bold">0 Items</span>
+              <span class="text-info">Subtotal: 00.00</span>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block">Ver Carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-10 rounded-full">
+              <img
+                width="50px"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a class="justify-between"> Perfil </a>
+            </li>
+            <li><a>Minhas Compras</a></li>
+            <li><a>Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- FIM Navbar  -->
+    <main class="container mx-auto">
+      <ul id="produtos"></ul>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

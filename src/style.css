@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.ph-shopping-cart {
+  @apply text-2xl;
+}
