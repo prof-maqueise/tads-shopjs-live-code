@@ -4,7 +4,7 @@ export  function CriarCard(produto){
     return /*html*/ `<div class="card bg-base-100 w-96 shadow-sm">
     <figure>
       <img
-        src="https://placehold.co/300"/>
+        src="${produto.thumbnail}"/>
     </figure>
     <div class="card-body">
       <h2 class="card-title">${produto.title}</h2>
